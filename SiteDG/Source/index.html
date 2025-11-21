@@ -1,0 +1,116 @@
+
+<!-- Isso aq é só uma base, tem que mexe muita coisa ainda, o ideal é até segunda isso aq estar ok, como é um protótipo ta ok, mas a gente precisa arrumar parte de banco e coisa do tipo
+parte de APi e coisa do tipo quem tem mexido é o CASSI, 
+O css ta bem básico, só pra ter uma ideia msm, mas a Workspace ta até q certa -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DG - Consultoria e Treinamento em Segurança do Trabalho</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="../Images/LOGO.png" alt="DG Consultoria Logo">
+                <div class="logo-text">
+                    <span class="logo-title">CONSULTORIA</span>
+                    <span class="logo-subtitle">E TREINAMENTOS EM SEGURANÇA DO TRABALHO</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="#servicos">Serviços</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Segurança do Trabalho com Excelência</h1>
+                <h2>DG Consultoria e Treinamentos</h2>
+                <p>Proteção, Prevenção e Conformidade Legal para sua empresa.</p>
+                <a href="#contato" class="btn-primary">Solicite um Orçamento</a>
+            </div>
+        </section>
+
+        <section id="servicos" class="section-servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <h3>Consultoria Especializada</h3>
+                        <p>Elaboração de laudos, programas (PGR, PCMSO) e documentos exigidos pelas NRs.</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Treinamentos In Company</h3>
+                        <p>Capacitação e formação de equipes em diversas Normas Regulamentadoras (NRs).</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Gestão de eSocial</h3>
+                        <p>Apoio completo no envio de eventos de SST para o Sistema de Escrituração Digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cursos" class="section-cursos">
+            <div class="container">
+                <h2>Cursos Online e Presenciais</h2>
+                <p class="intro">Nossa vitrine de cursos para capacitação rápida e eficiente.</p>
+                <div class="cursos-grid">
+                    <div class="curso-card">
+                        <div class="curso-header">NR 35 - Trabalho em Altura</div>
+                        <p>Curso obrigatório para qualquer atividade acima de 2 metros de altura.</p>
+                        <a href="#" class="btn-secondary">Ver Detalhes</a>
+                    </div>
+                    <div class="curso-card">
+                        <div class="curso-header">CIPA - NR 05</div>
+                        <p>Formação para membros da Comissão Interna de Prevenção de Acidentes.</p>
+                        <a href="#" class="btn-secondary">Ver Detalhes</a>
+                    </div>
+                    <div class="curso-card">
+                        <div class="curso-header">Primeiros Socorros</div>
+                        <p>Capacitação em procedimentos de emergência e atendimento inicial a vítimas.</p>
+                        <a href="#" class="btn-secondary">Ver Detalhes</a>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline">Ver Todos os Cursos</a>
+            </div>
+        </section>
+
+        <section id="contato" class="section-contato">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p>Entre em contato para orçamentos, dúvidas ou para conhecer nosso escritório.</p>
+                <form class="contato-form">
+                    <input type="text" placeholder="Seu Nome Completo" required>
+                    <input type="email" placeholder="Seu E-mail" required>
+                    <textarea placeholder="Como podemos ajudar sua empresa?" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+                <div class="info-contato">
+                    <p>Telefone:(Tem que colocar ai)</p>
+                    <p>Endereço:(Tem que colocar ai)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DG Consultoria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="Script/script.js"></script>
+</body>
+</html>
