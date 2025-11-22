@@ -1,19 +1,19 @@
-
-
-
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
+    background: #f5f5f5;
+}
 
-    /* Degradê azul -> azul-cinza */
-background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
-    background-attachment: fixed;
+/* Fundo branco atrás de tudo */
+.main-bg {
+    width: 100%;
     min-height: 100vh;
+    background: white;
     display: flex;
     justify-content: center;
 }
 
-/* CONTAINER GLASS */
+/* Container com gradiente muito leve verde */
 .container {
     width: 100%;
     max-width: 1300px;
@@ -22,10 +22,10 @@ background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
 
     border-radius: 30px;
 
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
+background: linear-gradient(180deg,rgba(0, 235, 106, 1) 0%, rgba(105, 255, 165, 1) 100%);
+    border: 2px solid #d7f5d7;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* HEADER */
@@ -39,7 +39,7 @@ background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
 
 .top-header h1 {
     font-size: 42px;
-    color: #FFFFFF;
+    color: white;
     font-weight: 700;
     flex: 1;
     text-align: left;
@@ -55,10 +55,19 @@ background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
 .icon {
     width: 40px;
     height: 40px;
-    filter: brightness(0) invert(1); /* deixa branco */
+    filter: brightness(0)  invert(1); 
+    cursor: pointer;
 }
 
-/* LISTA DE CURSOS */
+
+.logo {
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* GRID */
 .cursos {
     display: flex;
     gap: 25px;
@@ -66,56 +75,62 @@ background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
     justify-content: center;
 }
 
-/* CARD DO CURSO */
+/* CARD DO CURSO NO ESTILO DA INSPIRAÇÃO */
 .curso {
-    width: 260px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    padding: 20px;
+    width: 280px;
+    height: 500px;
+    background: white;
+    border-radius: 22px;
+    border: 2px solid #CCF0CC;
 
-    border: 2px solid rgba(255, 255, 255, 0.3);
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
 
     transition: 0.3s ease;
-    text-align: center;
 }
 
 .curso:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.25);
-    border-color: #008a3e;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    border-color: #1A2B8B;
     cursor: pointer;
 }
 
-/* IMAGEM DO CURSO */
-.curso img {
+/* IMAGEM */
+.curso-img {
     width: 100%;
     height: 150px;
-    background-color: #889AA6;
-    border-radius: 12px;
+    background: #ddd;
+}
+
+.curso-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-/* TITULO */
-.curso h2 {
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-top: 15px;
+/* ÁREA INFERIOR BRANCA COM O NOME */
+.curso-info {
+    padding: 18px;
+    background: white;
 }
 
-/* DESCRIÇÃO */
+.curso-info h2 {
+    font-size: 16px;
+    color: #0B0000;
+    font-weight: 600;
+    text-align: center;
+}
 .curso p {
     font-size: 14px;
-    color: #E5E5E5;
-    margin-top: 5px;
+    color: #0B0000;
+    margin-top: 2px;
 }
-.logo {
-    height: 100px;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.barra {
+    width: 100%;
+    height: 2px;
+    background: #00B050; /* Verde da paleta */
+    margin: 10px 0;
+    border-radius: 2px;
 }
+/* ======== MODO ESCURO ATIVADO ======== */
