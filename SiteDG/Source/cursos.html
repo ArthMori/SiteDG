@@ -1,142 +1,265 @@
-
-<!-- Isso aq é só uma base, tem que mexe muita coisa ainda, o ideal é até segunda isso aq estar ok, como é um protótipo ta ok, mas a gente precisa arrumar parte de banco e coisa do tipo
-parte de APi e coisa do tipo quem tem mexido é o CASSI, 
-O css ta bem básico, só pra ter uma ideia msm, mas a Workspace ta até q certa -->
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DG - Consultoria e Treinamento em Segurança do Trabalho</title>
-    <link rel="stylesheet" href="../Style/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Cursos</title>
+    <link rel="stylesheet" href="../Style/cursos.css" />
 </head>
+
 <body>
-    <header class="header">
+
+    <div class="main-bg">
+
         <div class="container">
-            <a href="#" class="logo">
-                <img src="../Images/LOGO.png" alt="DG Consultoria Logo">
-                <div class="logo-text">
-                    <span class="logo-title">CONSULTORIA</span>
-                    <span class="logo-subtitle">E TREINAMENTOS EM SEGURANÇA DO TRABALHO</span>
+
+            <header class="top-header">
+                <h1>Cursos Disponíveis</h1>
+
+                <img class="logo" src="../Images/LOGO.png" alt="">
+                <div class="icons">
+                    <img id="modos" class="icon" src="../Images/sunny.png" alt="">
+                    <a href="index.html"><img class="icon" src="../Images/home.png" alt="Home"></a>
+                    <a href="login.html"><img class="icon" src="../Images/user.png" alt="Perfil"></a>
                 </div>
-            </a>
-            <nav class="nav">
-                <a href="#servicos">Serviços</a>
-                <a href="#cursos">Cursos</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
-    </header>
+            </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <img class="fundo" src="https://grupobrmed.com.br/blog/wp-content/uploads/elementor/thumbs/Artigo-23-Capa-Seguranca-do-Trabalho-Dicas-r0tz1amxutww1o2z3458mjrjgnuphtus4w24qijm9m.jpg" alt="">
-                <h1>Segurança do Trabalho com Excelência</h1>
-                <h2>DG Consultoria e Treinamentos</h2>
-                <p>Proteção, Prevenção e Conformidade Legal para sua empresa.</p>
-                <a href="#contato" class="btn-primary">Solicite um Orçamento</a>
-            </div>
-        </section>
-
-        <section id="servicos" class="section-servicos">
-            <div class="container">
-                <h2>Nossos Serviços</h2>
-                <div class="servicos-grid">
-                    <div class="servico-card">
-                        <h3>Consultoria Especializada</h3>
-                        <p>Elaboração de laudos, programas (PGR, PCMSO) e documentos exigidos pelas NRs.</p>
-                        <div class="foto-servico">
-                        <img src="https://consultoriamult.com.br/blog/wp-content/uploads/2020/06/consultoria-especi-1024x481.jpg" alt="">
-                    </div>
-                    </div>
-                    <div class="servico-card">
-                        <h3>Treinamentos In Company</h3>
-                        <p>Capacitação e formação de equipes em diversas Normas Regulamentadoras (NRs).</p>
-                        <img class="foto-servico" src="https://www.previnsa.com.br/wp-content/uploads/2018/10/232989-aprenda-como-organizar-um-treinamento-in-company-na-sua-empresa.jpg" alt="">
-                    </div>
-                    <div class="servico-card">
-                        <h3>Gestão de eSocial</h3>
-                        <p>Apoio completo no envio de eventos de SST para o Sistema de Escrituração Digital.</p>
-                        <img class="foto-servico" src="https://priorityseg.com.br/wp-content/uploads/2025/08/Como-estao-os-envios-dos-eventos-de-SST-no-eSocial.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cursos" class="section-cursos">
-            <div class="container">
-                <h2>Cursos Online e Presenciais</h2>
-                <p class="intro">Nossa vitrine de cursos para capacitação rápida e eficiente.</p>
-                <div class="cursos-grid">
-                    <div class="curso-card">
-                        <div class="curso-header">NR 35 - Trabalho em Altura</div>
-                        <p>Curso obrigatório para qualquer atividade acima de 2 metros de altura.</p>
-                        <a href="#" class="btn-secondary">Ver Detalhes</a>
-                    </div>
-                    <div class="curso-card">
-                        <div class="curso-header">CIPA - NR 05</div>
-                        <p>Formação para membros da Comissão Interna de Prevenção de Acidentes.</p>
-                        <a href="#" class="btn-secondary">Ver Detalhes</a>
-                    </div>
-                    <div class="curso-card">
-                        <div class="curso-header">Primeiros Socorros</div>
-                        <p>Capacitação em procedimentos de emergência e atendimento inicial a vítimas.</p>
-                        <a href="#" class="btn-secondary">Ver Detalhes</a>
-                    </div>
-                </div>
-                <a href="cursos.html" class="btn-outline">Ver Todos os Cursos</a>
-            </div>
-        </section>
-
-        <section id="contato" class="section-contato">
-            <div class="container">
-                <h2>Fale Conosco</h2>
-                <p>Entre em contato para orçamentos, dúvidas ou para conhecer nosso escritório.</p>
-                <form class="contato-form">
-                    <input type="text" placeholder="Seu Nome Completo" required>
-                    <input type="email" placeholder="Seu E-mail" required>
-                    <textarea placeholder="Como podemos ajudar sua empresa?" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
-                </form>
-                <div class="info-contato">
-                    <h2>Contato</h2>
-                    <p>Telefone: (12) 99713-4860</p>
-                    <p>Endereço: R. Prudente de Morães, 41 - Itagaçaba, Cruzeiro - SP</p>
+            <section class="cursos">
                 
-                    <!-- PIN → Google Maps -->
-                    <a 
-                        href="https://www.google.com/maps?q=R.+Prudente+de+Mor%C3%A3es,+41+-+Itaga%C3%A7aba,+Cruzeiro+-+SP" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
-                        <img class="pin" src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="Localização no Maps">
-                    </a>
-                
-                    <!-- WHATSAPP -->
-                    <a 
-                        href="https://wa.me/5512997134860" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
-                        <img class="zap" src="https://images.freeimages.com/fic/images/icons/2779/simple_icons/4096/whatsapp_4096_black.png" alt="WhatsApp">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-        
-    <footer class="footer">
-        <div class="container">
-      <p>&copy; 2025 DG Consultoria. Todos os direitos reservados.</p>
+                <div class="curso">
+                    <div class="curso-img">
+                        <img src="https://wordpress-cms-revista-prod-assets.quero.space/uploads/2024/12/CIPA-1.jpg">
+                    </div>
+              <div class="curso-info">
+      <h2>NR-5 — CIPA (Formação e Reciclagem)</h2>
 
+        <div class="barra"></div>
+
+    <p>Treinamento voltado para capacitar membros da CIPA na prevenção de acidentes, identificação de riscos e promoção da saúde dentro da empresa.</p>
+</div>
+                </div>
+
+                <div class="curso">
+                    <div class="curso-img">
+                        <img src="https://cdn.wilsonsons.com.br/wp-content/uploads/2021/10/epis-scaled.jpeg">
+                    </div>
+                    <div class="curso-info">
+                        <h2>NR-6 — EPI (Equipamentos de Proteção Individual)</h2>
+                                                <div class="barra"></div>
+
+                        <p>Curso que orienta os colaboradores sobre o uso correto, conservação e responsabilidades no manuseio dos EPIs, garantindo proteção e conformidade legal.</p>
+
+                    </div>
+                </div>
+
+                <div class="curso">
+                    <div class="curso-img">
+                        <img src="https://prolifeengenharia.com.br/wp-content/uploads/2025/01/image-1-1024x682.png">
+                    </div>
+                    <div class="curso-info">
+                        <h2>NR-10 — Segurança em Instalações e Serviços com Eletricidade</h2>
+                                           <div class="barra"></div>
+
+                        <p>Capacitação essencial para profissionais que atuam com eletricidade, focando em prevenção, procedimentos seguros e redução de riscos elétricos.</p>
+
+                    </div>
+                </div>
+
+                <div class="curso">
+                    <div class="curso-img">
+                        <img src="https://www.cobli.co/wp-content/uploads/2022/02/NR-12_A-NR-12-garante-que-o-trabalho-em-maquinas-e-equipamentos-seja-seguro.2-1-scaled.jpeg">
+                    </div>
+                    <div class="curso-info">
+                        <h2>NR-12 — Segurança em Máquinas e Equipamentos</h2>
+                                            <div class="barra"></div>
+
+                        <p>Treinamento direcionado a operadores e mantenedores, abordando práticas seguras de operação, análise de riscos e prevenção de acidentes com máquinas.</p>
+
+                    </div>
+                </div>
+
+            </section>
         </div>
-    </footer>
-    
-    <script src="Script/script.js"></script>
+    </div>
+<script>
+const botaoModo = document.getElementById("modos");
+let darkAtivo = false;
+
+// CSS completo do modo escuro
+const darkCSS = `
+body.dark {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+
+background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container */
+body.dark .container {
+       width: 100%;
+    max-width: 1300px;
+    margin: 40px;
+    padding: 40px;
+
+    border-radius: 30px;
+    border: 0px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+body.dark .top-header{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+body.dark .top-header h1 {
+     font-size: 42px;
+    color: #FFFFFF;
+    font-weight: 700;
+    flex: 1;
+    text-align: left;
+}
+
+body.dark .icons {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+ body.dark .icon {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); 
+}
+
+/* Cards */
+body.dark .cursos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+body.dark .curso {
+    width: 260px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+body.dark .curso:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #008a3e;
+    cursor: pointer;
+}
+    body.dark .curso-info  {
+    background: rgba(255, 255, 255, 0.15);
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 15px;
+
+}
+
+/* Imagem */
+body.dark .curso-img img {
+      width: 100%;
+    height: 150px;
+    background-color: #889AA6;
+    border-radius: 12px;
+    object-fit: cover;
+}
+body.dark .curso-img {
+    overflow: hidden;
+    border-radius: 12px;
+}
+/* Título */
+body.dark .curso-info h2 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+/* Descrição */
+body.dark .curso-info p {
+   font-size: 14px;
+    color: #E5E5E5;
+    margin-top: 5px;
+}
+
+/* Barra */
+body.dark .barra {
+    background: #00B050;
+}
+
+/* Logo */
+body.dark .logo {
+    height: 100px;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+     body.dark .main-bg {
+    background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
+}
+`;
+
+let darkStyleTag = null;
+
+botaoModo.addEventListener("click", () => {
+    darkAtivo = !darkAtivo;
+
+    if (darkAtivo) {
+        // adiciona classe
+        document.body.classList.add("dark");
+
+        // cria e injeta o CSS
+        darkStyleTag = document.createElement("style");
+        darkStyleTag.id = "dark-mode-style";
+        darkStyleTag.innerHTML = darkCSS;
+        document.head.appendChild(darkStyleTag);
+
+        // troca o ícone
+        botaoModo.src = "../Images/moon.png";
+
+    } else {
+        // remove classe
+        document.body.classList.remove("dark");
+
+        // remove o CSS injetado
+        const styleElement = document.getElementById("dark-mode-style");
+        if (styleElement) styleElement.remove();
+
+        // volta o ícone
+        botaoModo.src = "../Images/sunny.png";
+    }
+});
+</script>
+
 </body>
 </html>
