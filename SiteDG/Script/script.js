@@ -80,7 +80,15 @@ const darkCSS = `
         color: #E5E5E5; /* Texto claro */
         border-top: 1px solid #1F2937; /* Borda sutil para separação */
     }
-`;
+    body.dark .icon-tema {
+            filter: brightness(0) invert(1);
+    }  body.dark .pin {
+            filter: brightness(0) invert(1);
+    }
+     body.dark .zap {
+            filter: brightness(0) invert(1);
+    }
+            `;
 
 // Função de troca de tema (Permanece igual)
 btnTema.addEventListener("click", () => {

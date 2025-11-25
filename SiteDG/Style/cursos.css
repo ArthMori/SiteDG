@@ -1,6 +1,3 @@
-/* =========================================
-   VARIÁVEIS GLOBAIS (Mesmas da Home)
-   ========================================= */
 :root {
     --green-primary: #00B050;
     --green-dark: #008a3e;
@@ -9,7 +6,6 @@
     --blue-dark: #1A288B;
     --gray-light: #f4f6f8;
     
-    /* Sombras e Bordas */
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
     --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 20px rgba(0,0,0,0.15);
@@ -17,13 +13,10 @@
     --radius: 8px;
 }
 
-/* =========================================
-   ESTRUTURA DA PÁGINA
-   ========================================= */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Padronizado com a Home */
-    background: var(--gray-light);     /* Fundo cinza claro suave */
+    font-family: 'Roboto', sans-serif;
+    background: var(--gray-light);
     color: var(--black-text);
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -34,26 +27,21 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    /* Removemos o background white fixo para permitir o dark mode */
+    
 }
-
-/* O Container principal agora usa o Verde da Marca */
 .container {
     width: 100%;
     max-width: 1300px;
     margin: 40px;
     padding: 40px;
     border-radius: 30px;
-    /* Gradiente padronizado com o botão da Home */
+    
     background: linear-gradient(180deg, var(--green-primary) 0%, var(--green-dark) 100%);
     border: 2px solid var(--green-primary);
     box-shadow: var(--shadow-lg);
     position: relative;
 }
 
-/* =========================================
-   CABEÇALHO (Dentro do Container)
-   ========================================= */
 .top-header {
     display: flex;
     justify-content: space-between;
@@ -64,7 +52,7 @@ body {
 
 .top-header h1 {
     font-size: 42px;
-    color: #FFFFFF; /* Texto branco sobre fundo verde sempre */
+    color: #FFFFFF;
     font-weight: 900;
     flex: 1;
     text-align: left;
@@ -81,7 +69,6 @@ body {
 .icon {
     width: 40px;
     height: 40px;
-    /* Ícones brancos para contrastar com o verde */
     filter: brightness(0) invert(1); 
     cursor: pointer;
     transition: transform var(--transition);
@@ -96,13 +83,11 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /* Adicionei filtro para garantir que a logo apareça bem no fundo verde, se necessário */
+
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-/* =========================================
-   GRID DE CURSOS (Cards)
-   ========================================= */
+
 .cursos {
     display: flex;
     gap: 25px;
@@ -113,20 +98,20 @@ body {
 .curso {
     width: 280px;
     height: 500px;
-    background: var(--white-bg); /* Isso permite mudar de cor no Dark Mode automaticamente */
+    background: var(--white-bg);
     border-radius: 22px;
-    border: 2px solid transparent; /* Borda transparente por padrão */
+    border: 2px solid transparent;
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all var(--transition);
-    display: flex; /* Melhor controle do layout interno */
+    display: flex;
     flex-direction: column;
 }
 
 .curso:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--blue-dark); /* Azul da marca no hover */
+    border-color: var(--blue-dark);
     cursor: pointer;
 }
 
@@ -145,15 +130,15 @@ body {
 
 .curso-info {
     padding: 18px;
-    background: inherit; /* Herda o fundo do card */
+    background: inherit;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .curso-info h2 {
-    font-size: 1.1em; /* Ajuste para Roboto */
-    color: var(--blue-dark); /* Título em Azul da marca */
+    font-size: 1.1em;
+    color: var(--blue-dark);
     font-weight: 700;
     text-align: center;
     margin-bottom: 10px;
@@ -161,7 +146,7 @@ body {
 
 .curso p {
     font-size: 14px;
-    color: var(--black-text); /* Texto padrão */
+    color: var(--black-text);
     margin-top: 2px;
     line-height: 1.5;
 }

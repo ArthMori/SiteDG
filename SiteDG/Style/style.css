@@ -152,6 +152,10 @@ a {
     position: relative;
     padding-bottom: 5px;
 }
+.nav a .icon-tema {
+    margin-left: 0px;
+    border: 0px;
+}
 
 .nav a::after {
     content: '';
@@ -162,6 +166,11 @@ a {
     left: 0;
     background-color: var(--green-primary);
     transition: width var(--transition);
+}
+
+.nav a:has(.icon-tema)::after,
+.nav a.no-underline::after {
+    display: none;
 }
 
 .nav a:hover {
