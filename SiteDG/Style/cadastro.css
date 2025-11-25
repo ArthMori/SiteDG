@@ -1,0 +1,164 @@
+/* Você pode copiar a seção :root e o reset (*) do login.css aqui para garantir consistência */
+:root {
+    --green-primary: #00B050;
+    --green-dark: #008a3e;
+    --black-text: #1a1a1a;
+    --white-bg: #FFFFFF;
+    --blue-dark: #1A288B;
+    --gray-light: #f4f6f8;
+    
+    --shadow-md: 0 4px 15px rgba(0,0,0,0.15);
+    --transition: 0.3s ease;
+    --radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--black-text);
+}
+
+.cadastro-body {
+    background-color: var(--gray-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cadastro-container {
+    width: 100%;
+    max-width: 450px; /* Mantendo a largura do login */
+}
+
+.cadastro-box {
+    background-color: var(--white-bg);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+/* --- Estilos do Logo (Repetidos do login.css para a área de logo) --- */
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.cadastro-logo {
+    max-height: 70px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.logo-title {
+    font-weight: 900;
+    font-size: 1.6em;
+    color: var(--blue-dark);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.logo-subtitle {
+    font-size: 0.7em;
+    font-weight: 700;
+    color: var(--black-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Títulos e Formulário --- */
+.cadastro-box h2 {
+    font-size: 1.8em;
+    color: var(--green-primary);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px; /* Reduzido um pouco o espaço por ter mais campos */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--black-text);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input-group input:focus {
+    border-color: var(--green-primary);
+    box-shadow: 0 0 0 3px rgba(0, 176, 80, 0.2);
+    outline: none;
+}
+
+/* --- Botão de Cadastro (Adaptado do btn-login) --- */
+.btn-cadastro {
+    width: 100%;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition);
+    border: none;
+    
+    background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 100%);
+    color: var(--white-bg);
+    box-shadow: 0 4px 10px rgba(0, 176, 80, 0.3);
+    margin-top: 15px;
+}
+
+.btn-cadastro:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 176, 80, 0.4);
+    filter: brightness(1.05);
+}
+
+.link-login {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: var(--blue-dark);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.link-login:hover {
+    color: var(--green-primary);
+}
+
+/* --- Mensagem de Erro --- */
+.error-message {
+    color: #ff3860;
+    font-weight: 500;
+    margin-bottom: 10px;
+    height: 1.2em;
+}
