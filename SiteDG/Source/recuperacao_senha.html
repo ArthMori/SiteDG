@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha - DG Consultoria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../Style/recuperacao_senha.css">
+</head>
+<body class="recovery-body">
+    <div class="recovery-container">
+        <div class="recovery-box">
+            <div class="logo-area">
+                <img src="../Images/LOGO.png" alt="DG Consultoria Logo" class="recovery-logo">
+                <div class="logo-text">
+                    <span class="logo-title">DG CONSULTORIA</span>
+                    <span class="logo-subtitle">Recuperação de Acesso</span>
+                </div>
+            </div>
+
+            <h2>Recuperar Senha</h2>
+            <p class="intro-text">
+                Informe o e-mail de cadastro para receber um link de redefinição.
+            </p>
+            
+            <form id="recovery-form" class="recovery-form">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@empresa.com.br" required>
+                </div>
+                
+                <p id="message-area" class="message-area"></p>
+
+                <button type="submit" class="btn-recovery">Enviar Link de Redefinição</button>
+                
+                <a href="login.html" class="link-login">Voltar ao Login</a>
+            </form>
+        </div>
+    </div>
+    
+    <script src="../Script/recuperacao_senha.js"></script>
+</body>
+</html>
