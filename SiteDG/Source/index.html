@@ -1,8 +1,3 @@
-
-<!-- Isso aq é só uma base, tem que mexe muita coisa ainda, o ideal é até segunda isso aq estar ok, como é um protótipo ta ok, mas a gente precisa arrumar parte de banco e coisa do tipo
-parte de APi e coisa do tipo quem tem mexido é o CASSI, 
-O css ta bem básico, só pra ter uma ideia msm, mas a Workspace ta até q certa -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,14 +23,16 @@ O css ta bem básico, só pra ter uma ideia msm, mas a Workspace ta até q certa
                 <a href="#servicos">Serviços</a>
                 <a href="#cursos">Cursos</a>
                 <a href="#contato">Contato</a>
+                <img id="btn-tema" src="../Images/sunny.png" alt="Mudar Tema" class="icon-tema" title="Alternar Tema">
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
+            <img class="fundo" src="https://grupobrmed.com.br/blog/wp-content/uploads/elementor/thumbs/Artigo-23-Capa-Seguranca-do-Trabalho-Dicas-r0tz1amxutww1o2z3458mjrjgnuphtus4w24qijm9m.jpg" alt="Fundo Hero">
+            
             <div class="container">
-                <img class="fundo" src="https://grupobrmed.com.br/blog/wp-content/uploads/elementor/thumbs/Artigo-23-Capa-Seguranca-do-Trabalho-Dicas-r0tz1amxutww1o2z3458mjrjgnuphtus4w24qijm9m.jpg" alt="">
                 <h1>Segurança do Trabalho com Excelência</h1>
                 <h2>DG Consultoria e Treinamentos</h2>
                 <p>Proteção, Prevenção e Conformidade Legal para sua empresa.</p>
@@ -51,18 +48,22 @@ O css ta bem básico, só pra ter uma ideia msm, mas a Workspace ta até q certa
                         <h3>Consultoria Especializada</h3>
                         <p>Elaboração de laudos, programas (PGR, PCMSO) e documentos exigidos pelas NRs.</p>
                         <div class="foto-servico">
-                        <img src="https://consultoriamult.com.br/blog/wp-content/uploads/2020/06/consultoria-especi-1024x481.jpg" alt="">
-                    </div>
+                            <img src="https://consultoriamult.com.br/blog/wp-content/uploads/2020/06/consultoria-especi-1024x481.jpg" alt="Consultoria">
+                        </div>
                     </div>
                     <div class="servico-card">
                         <h3>Treinamentos In Company</h3>
                         <p>Capacitação e formação de equipes em diversas Normas Regulamentadoras (NRs).</p>
-                        <img class="foto-servico" src="https://www.previnsa.com.br/wp-content/uploads/2018/10/232989-aprenda-como-organizar-um-treinamento-in-company-na-sua-empresa.jpg" alt="">
+                        <div class="foto-servico">
+                            <img src="https://www.previnsa.com.br/wp-content/uploads/2018/10/232989-aprenda-como-organizar-um-treinamento-in-company-na-sua-empresa.jpg" alt="Treinamento">
+                        </div>
                     </div>
                     <div class="servico-card">
                         <h3>Gestão de eSocial</h3>
                         <p>Apoio completo no envio de eventos de SST para o Sistema de Escrituração Digital.</p>
-                        <img class="foto-servico" src="https://priorityseg.com.br/wp-content/uploads/2025/08/Como-estao-os-envios-dos-eventos-de-SST-no-eSocial.jpg" alt="">
+                        <div class="foto-servico">
+                            <img src="https://priorityseg.com.br/wp-content/uploads/2025/08/Como-estao-os-envios-dos-eventos-de-SST-no-eSocial.jpg" alt="eSocial">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,22 +108,10 @@ O css ta bem básico, só pra ter uma ideia msm, mas a Workspace ta até q certa
                     <h2>Contato</h2>
                     <p>Telefone: (12) 99713-4860</p>
                     <p>Endereço: R. Prudente de Morães, 41 - Itagaçaba, Cruzeiro - SP</p>
-                
-                    <!-- PIN → Google Maps -->
-                    <a 
-                        href="https://www.google.com/maps?q=R.+Prudente+de+Mor%C3%A3es,+41+-+Itaga%C3%A7aba,+Cruzeiro+-+SP" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://www.google.com/maps?q=R.+Prudente+de+Mor%C3%A3es,+41+-+Itaga%C3%A7aba,+Cruzeiro+-+SP" target="_blank" rel="noopener noreferrer">
                         <img class="pin" src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="Localização no Maps">
                     </a>
-                
-                    <!-- WHATSAPP -->
-                    <a 
-                        href="https://wa.me/5512997134860" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://wa.me/5512997134860" target="_blank" rel="noopener noreferrer">
                         <img class="zap" src="https://images.freeimages.com/fic/images/icons/2779/simple_icons/4096/whatsapp_4096_black.png" alt="WhatsApp">
                     </a>
                 </div>
@@ -132,11 +121,10 @@ O css ta bem básico, só pra ter uma ideia msm, mas a Workspace ta até q certa
         
     <footer class="footer">
         <div class="container">
-      <p>&copy; 2025 DG Consultoria. Todos os direitos reservados.</p>
-
+            <p>© 2025 DG Consultoria. Todos os direitos reservados.</p>
         </div>
     </footer>
     
-    <script src="Script/script.js"></script>
+    <script src="../Script/script.js"></script>
 </body>
 </html>

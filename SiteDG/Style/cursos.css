@@ -1,34 +1,59 @@
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: #f5f5f5;
+/* =========================================
+   VARIÁVEIS GLOBAIS (Mesmas da Home)
+   ========================================= */
+:root {
+    --green-primary: #00B050;
+    --green-dark: #008a3e;
+    --black-text: #1a1a1a;
+    --white-bg: #FFFFFF;
+    --blue-dark: #1A288B;
+    --gray-light: #f4f6f8;
+    
+    /* Sombras e Bordas */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 20px rgba(0,0,0,0.15);
+    --transition: 0.3s ease;
+    --radius: 8px;
 }
 
-/* Fundo branco atrás de tudo */
+/* =========================================
+   ESTRUTURA DA PÁGINA
+   ========================================= */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Padronizado com a Home */
+    background: var(--gray-light);     /* Fundo cinza claro suave */
+    color: var(--black-text);
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .main-bg {
     width: 100%;
     min-height: 100vh;
-    background: white;
     display: flex;
     justify-content: center;
+    /* Removemos o background white fixo para permitir o dark mode */
 }
 
-/* Container com gradiente muito leve verde */
+/* O Container principal agora usa o Verde da Marca */
 .container {
     width: 100%;
     max-width: 1300px;
     margin: 40px;
     padding: 40px;
-
     border-radius: 30px;
-
-background: linear-gradient(180deg,rgba(0, 235, 106, 1) 0%, rgba(105, 255, 165, 1) 100%);
-    border: 2px solid #d7f5d7;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    /* Gradiente padronizado com o botão da Home */
+    background: linear-gradient(180deg, var(--green-primary) 0%, var(--green-dark) 100%);
+    border: 2px solid var(--green-primary);
+    box-shadow: var(--shadow-lg);
+    position: relative;
 }
 
-/* HEADER */
+/* =========================================
+   CABEÇALHO (Dentro do Container)
+   ========================================= */
 .top-header {
     display: flex;
     justify-content: space-between;
@@ -39,10 +64,11 @@ background: linear-gradient(180deg,rgba(0, 235, 106, 1) 0%, rgba(105, 255, 165, 
 
 .top-header h1 {
     font-size: 42px;
-    color: white;
-    font-weight: 700;
+    color: #FFFFFF; /* Texto branco sobre fundo verde sempre */
+    font-weight: 900;
     flex: 1;
     text-align: left;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .icons {
@@ -55,19 +81,28 @@ background: linear-gradient(180deg,rgba(0, 235, 106, 1) 0%, rgba(105, 255, 165, 
 .icon {
     width: 40px;
     height: 40px;
-    filter: brightness(0)  invert(1); 
+    /* Ícones brancos para contrastar com o verde */
+    filter: brightness(0) invert(1); 
     cursor: pointer;
+    transition: transform var(--transition);
 }
 
+.icon:hover {
+    transform: scale(1.1);
+}
 
 .logo {
     height: 100px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    /* Adicionei filtro para garantir que a logo apareça bem no fundo verde, se necessário */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-/* GRID */
+/* =========================================
+   GRID DE CURSOS (Cards)
+   ========================================= */
 .cursos {
     display: flex;
     gap: 25px;
@@ -75,32 +110,31 @@ background: linear-gradient(180deg,rgba(0, 235, 106, 1) 0%, rgba(105, 255, 165, 
     justify-content: center;
 }
 
-/* CARD DO CURSO NO ESTILO DA INSPIRAÇÃO */
 .curso {
     width: 280px;
     height: 500px;
-    background: white;
+    background: var(--white-bg); /* Isso permite mudar de cor no Dark Mode automaticamente */
     border-radius: 22px;
-    border: 2px solid #CCF0CC;
-
+    border: 2px solid transparent; /* Borda transparente por padrão */
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
-
-    transition: 0.3s ease;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition);
+    display: flex; /* Melhor controle do layout interno */
+    flex-direction: column;
 }
 
 .curso:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-    border-color: #1A2B8B;
+    box-shadow: var(--shadow-lg);
+    border-color: var(--blue-dark); /* Azul da marca no hover */
     cursor: pointer;
 }
 
-/* IMAGEM */
 .curso-img {
     width: 100%;
     height: 150px;
     background: #ddd;
+    position: relative;
 }
 
 .curso-img img {
@@ -109,28 +143,33 @@ background: linear-gradient(180deg,rgba(0, 235, 106, 1) 0%, rgba(105, 255, 165, 
     object-fit: cover;
 }
 
-/* ÁREA INFERIOR BRANCA COM O NOME */
 .curso-info {
     padding: 18px;
-    background: white;
+    background: inherit; /* Herda o fundo do card */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .curso-info h2 {
-    font-size: 16px;
-    color: #0B0000;
-    font-weight: 600;
+    font-size: 1.1em; /* Ajuste para Roboto */
+    color: var(--blue-dark); /* Título em Azul da marca */
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 10px;
 }
+
 .curso p {
     font-size: 14px;
-    color: #0B0000;
+    color: var(--black-text); /* Texto padrão */
     margin-top: 2px;
+    line-height: 1.5;
 }
+
 .barra {
     width: 100%;
-    height: 2px;
-    background: #00B050; /* Verde da paleta */
+    height: 3px;
+    background: var(--green-primary);
     margin: 10px 0;
     border-radius: 2px;
 }
-/* ======== MODO ESCURO ATIVADO ======== */

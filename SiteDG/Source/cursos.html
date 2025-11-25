@@ -35,13 +35,11 @@
                     <div class="curso-img">
                         <img src="https://wordpress-cms-revista-prod-assets.quero.space/uploads/2024/12/CIPA-1.jpg">
                     </div>
-              <div class="curso-info">
-      <h2>NR-5 — CIPA (Formação e Reciclagem)</h2>
-
-        <div class="barra"></div>
-
-    <p>Treinamento voltado para capacitar membros da CIPA na prevenção de acidentes, identificação de riscos e promoção da saúde dentro da empresa.</p>
-</div>
+                    <div class="curso-info">
+                        <h2>NR-5 — CIPA (Formação e Reciclagem)</h2>
+                        <div class="barra"></div>
+                        <p>Treinamento voltado para capacitar membros da CIPA na prevenção de acidentes, identificação de riscos e promoção da saúde dentro da empresa.</p>
+                    </div>
                 </div>
 
                 <div class="curso">
@@ -50,10 +48,8 @@
                     </div>
                     <div class="curso-info">
                         <h2>NR-6 — EPI (Equipamentos de Proteção Individual)</h2>
-                                                <div class="barra"></div>
-
+                        <div class="barra"></div>
                         <p>Curso que orienta os colaboradores sobre o uso correto, conservação e responsabilidades no manuseio dos EPIs, garantindo proteção e conformidade legal.</p>
-
                     </div>
                 </div>
 
@@ -63,10 +59,8 @@
                     </div>
                     <div class="curso-info">
                         <h2>NR-10 — Segurança em Instalações e Serviços com Eletricidade</h2>
-                                           <div class="barra"></div>
-
+                        <div class="barra"></div>
                         <p>Capacitação essencial para profissionais que atuam com eletricidade, focando em prevenção, procedimentos seguros e redução de riscos elétricos.</p>
-
                     </div>
                 </div>
 
@@ -76,190 +70,14 @@
                     </div>
                     <div class="curso-info">
                         <h2>NR-12 — Segurança em Máquinas e Equipamentos</h2>
-                                            <div class="barra"></div>
-
+                        <div class="barra"></div>
                         <p>Treinamento direcionado a operadores e mantenedores, abordando práticas seguras de operação, análise de riscos e prevenção de acidentes com máquinas.</p>
-
                     </div>
                 </div>
 
             </section>
         </div>
     </div>
-<script>
-const botaoModo = document.getElementById("modos");
-let darkAtivo = false;
-
-// CSS completo do modo escuro
-const darkCSS = `
-body.dark {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-
-background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-/* Container */
-body.dark .container {
-       width: 100%;
-    max-width: 1300px;
-    margin: 40px;
-    padding: 40px;
-
-    border-radius: 30px;
-    border: 0px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-/* Header */
-body.dark .top-header{
-   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-body.dark .top-header h1 {
-     font-size: 42px;
-    color: #FFFFFF;
-    font-weight: 700;
-    flex: 1;
-    text-align: left;
-}
-
-body.dark .icons {
-    display: flex;
-    gap: 20px;
-    flex: 1;
-    justify-content: flex-end;
-}
- body.dark .icon {
-    width: 40px;
-    height: 40px;
-    filter: brightness(0) invert(1); 
-}
-
-/* Cards */
-body.dark .cursos {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-body.dark .curso {
-    width: 260px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    padding: 20px;
-
-    border: 2px solid rgba(255, 255, 255, 0.3);
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-body.dark .curso:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.25);
-    border-color: #008a3e;
-    cursor: pointer;
-}
-    body.dark .curso-info  {
-    background: rgba(255, 255, 255, 0.15);
-        padding: 15px;
-        border-radius: 12px;
-        margin-top: 15px;
-
-}
-
-/* Imagem */
-body.dark .curso-img img {
-      width: 100%;
-    height: 150px;
-    background-color: #889AA6;
-    border-radius: 12px;
-    object-fit: cover;
-}
-body.dark .curso-img {
-    overflow: hidden;
-    border-radius: 12px;
-}
-/* Título */
-body.dark .curso-info h2 {
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-top: 15px;
-}
-
-/* Descrição */
-body.dark .curso-info p {
-   font-size: 14px;
-    color: #E5E5E5;
-    margin-top: 5px;
-}
-
-/* Barra */
-body.dark .barra {
-    background: #00B050;
-}
-
-/* Logo */
-body.dark .logo {
-    height: 100px;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
-}
-     body.dark .main-bg {
-    background: linear-gradient(180deg, #0f1720 0%, #111827 100%);
-}
-`;
-
-let darkStyleTag = null;
-
-botaoModo.addEventListener("click", () => {
-    darkAtivo = !darkAtivo;
-
-    if (darkAtivo) {
-        // adiciona classe
-        document.body.classList.add("dark");
-
-        // cria e injeta o CSS
-        darkStyleTag = document.createElement("style");
-        darkStyleTag.id = "dark-mode-style";
-        darkStyleTag.innerHTML = darkCSS;
-        document.head.appendChild(darkStyleTag);
-
-        // troca o ícone
-        botaoModo.src = "../Images/moon.png";
-
-    } else {
-        // remove classe
-        document.body.classList.remove("dark");
-
-        // remove o CSS injetado
-        const styleElement = document.getElementById("dark-mode-style");
-        if (styleElement) styleElement.remove();
-
-        // volta o ícone
-        botaoModo.src = "../Images/sunny.png";
-    }
-});
-</script>
-
+    <script src="../Script/cursos.js"></script>
 </body>
 </html>
